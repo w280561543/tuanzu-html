@@ -1,11 +1,53 @@
 html {
-	font-family: sans-serif;
-	line-height: 1.15;
-	-ms-text-size-adjust: 100%;
-	-webkit-text-size-adjust: 100%;
-	-webkit-tap-highlight-color: rgba(0, 0, 0, 0)
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+	-webkit-box-sizing: inherit;
+	-moz-box-sizing: inherit;
+	box-sizing: inherit;
+}
+
+html {
+	-ms-overflow-style: scrollbar;
+	-webkit-tap-highlight-color: transparent;
 }
 
 body {
+	font-family: "微软雅黑", "Helvetica Neue", Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	font-weight: normal;
+	line-height: 1.5;
+	color: #292b2c;
+	background-color: #FFF;
+}
+
+
+/* Reset flexslider */
+
+.flexslider {
 	margin: 0;
+	border: none;
+}
+
+.flex-control-nav {
+	bottom: 40px;
+}
+
+.flex-direction-nav a {
+	height: 52px;
+}
+
+.flex-control-paging li a:hover,
+.flex-control-paging li a.flex-active {
+	background-color: #FF8C00;
+}
+
+.flex-direction-nav .flex-prev,
+.flex-direction-nav .flex-next {
+	right: 0px;
 }
