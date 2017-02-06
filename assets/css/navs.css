@@ -1,0 +1,35 @@
+.nav {
+	display: table;
+	*display: inline;
+	padding-left: 0;
+	margin: 0;
+	list-style: none;
+}
+
+.nav> .nav-item {
+	display: table-cell;
+	*float: left;
+}
+
+.nav-fill> .nav-item {
+	width: 240px;
+	text-align: center;
+}
+
+.nav-link {
+	color: #FFF;
+	display: block;
+	font-size: 18px;
+	padding: 8px 16px;
+}
+
+.nav-link,
+.nav-link:focus,
+.nav-link:hover {
+	text-decoration: none;
+}
+
+.nav-link:hover {
+	color: #FF8C00;
+	background-color: #FFF;
+}
