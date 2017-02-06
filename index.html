@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 	<head>
 		<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
@@ -10,10 +11,91 @@
 		<meta name="keywords" content="52团组" />
 
 		<title>52团租</title>
+
+		<link rel="shortcut icon" href="favicon.ico" />
+		<!--<link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/normalize/5.0.0/normalize.min.css"/>-->
+		<link rel="stylesheet" type="text/css" href="node_modules/normalize.css/normalize.min.css"/>
+		<!--<link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/flexslider/2.6.3/flexslider.min.css"/>-->
+		<link rel="stylesheet" type="text/css" href="assets/libs/flexslider.css"/>
 		
-		<link rel="shortcut icon" href="favicon.ico"/>
-		<link rel="stylesheet" type="text/css" href="assets/css/core.css" />
+		<link rel="stylesheet" type="text/css" href="assets/css/core.css"/>
+		<link rel="stylesheet" type="text/css" href="assets/css/color.css"/>
+		<link rel="stylesheet" type="text/css" href="assets/css/grid.css"/>
+		<link rel="stylesheet" type="text/css" href="assets/css/navs.css"/>
+		<link rel="stylesheet" type="text/css" href="assets/css/spacing.css"/>
 	</head>
+
 	<body>
+		<div class="container text-dark-orange">
+			<div class="row">
+				<div>
+					<img src="assets/images/logo.png"/>
+					<span>都市社交青年公寓</span>
+				</div>
+				<div>
+					<img src="assets/images/call.png"/>
+					<span>020-86348611</span>
+				</div>
+			</div>
+		</div>
+		<div class="w-100 bg-dark-orange">
+			<div class="container">
+				<div class="row">					
+					<ul class="nav">
+						<li class="nav-item"><a class="nav-link" href="/">首页</a></li>
+						<li class="nav-item"><a class="nav-link" href="/">我要租房</a></li>
+						<li class="nav-item"><a class="nav-link" href="/">租前须知</a></li>
+						<li class="nav-item"><a class="nav-link" href="/">房主加盟</a></li>
+						<li class="nav-item"><a class="nav-link" href="/">关于我们</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="flexslider">
+			<ul class="slides">
+				<li><img src="assets/images/slider/1.jpg"/></li>
+				<li><img src="assets/images/slider/2.jpg"/></li>
+			</ul>
+		</div>
+		<div class="w-100">
+			<div class="container">
+				<form name="searchform" method="post" action="/search/index.php">
+	                <input class="form-control" name="keyword" type="text" placeholder="区域/街道路段/小区/地铁/地段/风格特色/标题标语">
+	                <button class="btn btn-search" type="submit">搜索</button>
+	            </form>
+			</div>
+		</div>
+		<div class="container">
+			<ul class="nav nav-fill">
+				<li class="nav-item"><i>1</i><h4>真实房源</h4><small>精品装修优质生活环境</small></li>
+				<li class="nav-item"><i>1</i><h4>免中介费</h4><small>免除中介费用随时入住</small></li>
+				<li class="nav-item"><i>1</i><h4>交通便利</h4><small>地铁沿线随下随到随走</small></li>
+				<li class="nav-item"><i>1</i><h4>免费wifi</h4><small>畅想游玩于网络世界中</small></li>
+				<li class="nav-item"><i>1</i><h4>维修保洁</h4><small>定期保洁及时上门维修</small></li>
+			</ul>
+		</div>
+		<div class="container">
+			展示
+		</div>
+		<div class="container">
+			<ul class="nav nav-fill">
+				<li class="nav-item"><span>01</span><h4>在线找房</h4><small>随时拨打客服热线预约看房</small></li>
+				<li class="nav-item"><span>02</span><h4>管家陪看</h4><small>管家全程陪同解除疑惑</small></li>
+				<li class="nav-item"><span>03</span><h4>签订协议</h4><small>了解入住须知抢占优质房源</small></li>
+				<li class="nav-item"><span>04</span><h4>付款方式</h4><small>选择您喜欢的付款方式</small></li>
+				<li class="nav-item"><span>05</span><h4>伶包入住</h4><small>随时随地伶包入住</small></li>
+			</ul>
+		</div>
+		<div class="w-100">
+			<div class="container">
+				脚
+			</div>
+		</div>
+		
+		<!--<script type="text/javascript" charset="utf-8" src="//cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>-->
+		<script type="text/javascript" charset="utf-8" src="node_modules/jquery/dist/jquery.min.js"></script>
+		<!--<script type="text/javascript" charset="utf-8" src="//cdn.bootcss.com/flexslider/2.6.3/jquery.flexslider.min.js"></script>-->
+		<script type="text/javascript" charset="utf-8" src="assets/libs/jquery.flexslider.js"></script>
+		<script type="text/javascript" charset="utf-8" src="assets/js/core.js"></script>
 	</body>
 </html>
