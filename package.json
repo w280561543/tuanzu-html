@@ -1,19 +1,20 @@
 {
-	"name": "tuanzu-html",
-	"version": "0.0.1-dev.1",
-	"description": "tuanzu-html",
-	"scripts": {},
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/w280561543/tuanzu-html.git"
-	},
-	"author": "MaingBen <280561543@qq.com>",
-	"bugs": {
-		"url": "https://github.com/w280561543/tuanzu-html/issues"
-	},
-	"homepage": "https://github.com/w280561543/tuanzu-html#readme",
-	"dependencies": {
-		"normalize.css": "^5.0.0",
-		"jquery": "^1.12.4"
-	}
+  "name": "tuanzu-html",
+  "version": "0.0.1-dev.1",
+  "description": "tuanzu-html",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/w280561543/tuanzu-html.git"
+  },
+  "author": "MaingBen <280561543@qq.com>",
+  "bugs": {
+    "url": "https://github.com/w280561543/tuanzu-html/issues"
+  },
+  "homepage": "https://github.com/w280561543/tuanzu-html#readme",
+  "dependencies": {
+    "flexslider": "^2.6.3",
+    "jquery": "^1.12.4",
+    "normalize.css": "^5.0.0"
+  }
 }
