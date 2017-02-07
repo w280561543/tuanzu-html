@@ -7,11 +7,32 @@
 }
 
 .text-right {
-	text-align: right
+	text-align: right !important
 }
 
-.w-100 {
+.font-size-12 {
+	font-size: 12px;
+}
+
+.font-size-46 {
+	font-size: 46px;
+}
+
+.display-block {
+	display: block;
+}
+
+.display-inline {
+	display: inline-block;
+	*display: inline;
+}
+
+.w-100p {
 	width: 100% !important;
+}
+
+.h-80 {
+	height: 80px;
 }
 
 .float-left {
@@ -24,4 +45,7 @@
 
 .float-none {
 	float: none !important;
+}
+.pl-40 {
+	padding-left: 40px;
 }

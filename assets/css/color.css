@@ -1,7 +1,22 @@
+.text-dark-darkturquoise {
+	color: #00CED1;
+}
+
+.text-dark-orangered {
+	color: #FF4500;
+}
+
 .text-dark-orange {
 	color: #FF8C00;
 }
 
+.text-dark-darkgray {
+	color: #A9A9A9;
+}
+
 .bg-dark-orange {
 	background-color: #FF8C00;
+}
+.bg-dark-darkgray {
+	background-color: #F5F5F5;
 }
