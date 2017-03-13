@@ -154,8 +154,7 @@ h6 {
 .line-big .x12 {
 	position: relative;
 	min-height: 1px;
-	padding-right: 10px;
-	padding-left: 10px
+	padding: 10px;
 }
 
 .x1,
@@ -286,13 +285,11 @@ h6 {
 /* item */
 
 .item {
-	margin-bottom: 20px;
 	background-color: #FFF;
 }
 
 .item a,
 .item a:visited {
-	text-decoration: none;
 	color: #727272;
 	text-decoration: none;
 }
