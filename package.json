@@ -16,5 +16,11 @@
     "flexslider": "^2.6.3",
     "jquery": "^1.12.4",
     "normalize.css": "^5.0.0"
-  }
+  },
+  "devDependencies": {},
+  "keywords": [
+    "Maing",
+    "<280561543@qq.com>"
+  ],
+  "license": "ISC"
 }
