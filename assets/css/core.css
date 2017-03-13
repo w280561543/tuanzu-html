@@ -187,6 +187,7 @@ h6 {
 .x4 {
 	width: 33.33333333%;
 	width: 31% \0;
+	*width: 30%;
 }
 
 .x5 {
@@ -194,7 +195,9 @@ h6 {
 }
 
 .x6 {
-	width: 50%
+	width: 50%;
+	width: 48% \0;
+	*width: 47%;
 }
 
 .x7 {
@@ -257,6 +260,7 @@ h6 {
 
 .nav-fill> .nav-item {
 	width: 240px;
+	*width: 200px;
 	background-color: #FFF;
 }
 
