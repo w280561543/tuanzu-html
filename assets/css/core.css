@@ -84,7 +84,9 @@ h6 {
 .text-dark-orange {
 	color: #FF8C00;
 }
-
+.text-white {
+	color: #FFF;
+}
 .text-dark-darkgray {
 	color: #A9A9A9;
 }
@@ -253,31 +255,43 @@ h6 {
 	list-style: none;
 }
 
-.nav> .nav-item {
+.nav>.nav-item {
 	display: table-cell;
 	*float: left;
 }
 
-.nav-fill> .nav-item {
+.nav-fill>.nav-item {
 	width: 240px;
 	*width: 200px;
 	background-color: #FFF;
 }
 
-.nav-link {
-	color: #FFF;
+.nav-link,
+.nav-link-sm {
 	display: block;
+}
+
+.nav-link {
 	font-size: 18px;
-	padding: 8px 16px;
+	padding: 5px 15px;
+}
+
+.nav-link-sm {
+	font-size: 14px;
+	padding: 0px 10px;
 }
 
 .nav-link,
 .nav-link:focus,
-.nav-link:hover {
+.nav-link:hover,
+.nav-link-sm,
+.nav-link-sm:focus,
+.nav-link-sm:hover {
 	text-decoration: none;
 }
 
-.nav-link:hover {
+.nav-link:hover,
+.nav-link-sm:hover {
 	color: #FF8C00;
 	background-color: #FFF;
 }
