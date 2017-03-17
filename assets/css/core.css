@@ -96,19 +96,23 @@ h6 {
 	z-index: 0;
 	float: left;
 }
+
 .filter-options>dl>dt {
 	font-weight: bolder;
 	color: #666666;
 	margin-left: 5px;
 }
+
 .filter-options>dl>dd {
 	margin-left: 15px;
 }
-.filter-options > dl > dd > label:hover,
-.filter-options > dl > dd.active > label {
+
+.filter-options>dl>dd>label:hover,
+.filter-options>dl>dd.active>label {
 	cursor: pointer;
 	color: #ed6c00;
 }
+
 
 /* filter S */
 
@@ -227,7 +231,9 @@ h6 {
 }
 
 .x3 {
-	width: 25%
+	width: 25%;
+	width: 23% \0;
+	*width: 22%;
 }
 
 .x4 {
@@ -546,9 +552,23 @@ h6 {
 .float-none {
 	float: none !important;
 }
-
+.pl-20{
+padding-top: 20px;
+}
 .pl-40 {
 	padding-left: 40px;
+}
+.mt-5 {
+	margin-top: 5px;
+}
+.mt-10 {
+	margin-top: 10px;
+}
+.mt-20 {
+	margin-top: 20px;
+}
+.cb {
+	clear: both !important;
 }
 
 
