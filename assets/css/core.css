@@ -552,21 +552,32 @@ h6 {
 .float-none {
 	float: none !important;
 }
-.pl-20{
-padding-top: 20px;
+
+.pl-20 {
+	padding-top: 20px;
 }
+
 .pl-40 {
 	padding-left: 40px;
 }
+
+.mlr-a {
+	margin-left: auto;
+	margin-right: auto;
+}
+
 .mt-5 {
 	margin-top: 5px;
 }
+
 .mt-10 {
 	margin-top: 10px;
 }
+
 .mt-20 {
 	margin-top: 20px;
 }
+
 .cb {
 	clear: both !important;
 }
