@@ -122,7 +122,7 @@ h6 {
 
 /* faq S */
 
-.faq-categories {
+.faq-categories,.join-categories {
 	list-style: none;
 	padding: 0;
 	margin: 0;
@@ -161,7 +161,7 @@ h6 {
 	position: fixed;
 	top: 10px;
 }
-
+.join-items,
 .faq-items {
 	height: auto;
 	overflow: visible;
@@ -200,7 +200,7 @@ a.faq-trigger {
 a.faq-trigger:hover {
 	background-color: #F5F5F5;
 }
-
+.join-content,
 .faq-content {
 	display: none;
 	font-size: 14px;
@@ -210,10 +210,28 @@ a.faq-trigger:hover {
 
 /* faq E */
 /* join S */
-
-
-
-
+.join-categories a {
+	position: relative;
+	display: block;
+	overflow: hidden;
+	height: 50px;
+	line-height: 50px;
+	color: #000;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	text-decoration: none;
+	padding: 0 20px;
+	font-size: 14px;
+	font-weight: 600;
+}
+.join-categories li.selected a,
+.join-categories a:hover {
+	background-color: #000;
+	color:#FFF;
+}
+.join-items {
+	min-height: 600px;
+}
 /* join E */
 
 
