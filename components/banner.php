@@ -14,7 +14,7 @@
 	<div class="container">
 		<div class="row">
 			<ul class="nav">
-				<li class="nav-item"><a class="nav-link text-white" href="index.html">首页</a></li>
+				<li class="nav-item"><a class="nav-link text-white" href="/">首页</a></li>
 				<li class="nav-item"><a class="nav-link text-white" href="list.html">我要租房</a></li>
 				<li class="nav-item"><a class="nav-link text-white" href="faq.html">租前须知</a></li>
 				<li class="nav-item"><a class="nav-link text-white" href="fd.html">房主加盟</a></li>

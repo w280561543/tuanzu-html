@@ -2,9 +2,7 @@ $(document).ready(function() {
 	$(".flexslider").flexslider({
 		animation: "slide"
 	});
-	
-	$('.lazy').Lazy();
-	
+
 	var $list = $('#list');
 	$.getJSON('home.php', function(res) {
 		var html = '';
