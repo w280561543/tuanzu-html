@@ -48,14 +48,14 @@
 				<div class="x6">
 					<div class="item">
 						<div class="item-img">
-							<a href="javascript:void(0);" target="_blank"><img class="lazy" src="http://iph.href.lu/600x400?text=52%E5%9B%A2%E7%A7%9F&fg=000&bg=FFF"/></a>
+							<a href="javascript:void(0);" target="_blank"><img class="lazy" src="http://iph.href.lu/600x400?text=.&fg=000&bg=FFF"/></a>
 						</div>
 					</div>
 				</div>
 				<div class="x6">
 					<div class="item">
 						<div class="item-img">
-							<a href="javascript:void(0);" target="_blank"><img class="lazy" src="http://iph.href.lu/600x400?text=52%E5%9B%A2%E7%A7%9F&fg=000&bg=FFF"/></a>
+							<a href="javascript:void(0);" target="_blank"><img class="lazy" src="http://iph.href.lu/600x400?text=.&fg=000&bg=FFF"/></a>
 						</div>
 					</div>
 				</div>
@@ -64,14 +64,14 @@
 				<div class="x6">
 					<div class="item">
 						<div class="item-img">
-							<a href="javascript:void(0);" target="_blank"><img class="lazy" src="http://iph.href.lu/600x400?text=52%E5%9B%A2%E7%A7%9F&fg=000&bg=FFF"/></a>
+							<a href="javascript:void(0);" target="_blank"><img class="lazy" src="http://iph.href.lu/600x400?text=.&fg=000&bg=FFF"/></a>
 						</div>
 					</div>
 				</div>
 				<div class="x6">
 					<div class="item">
 						<div class="item-img">
-							<a href="javascript:void(0);" target="_blank"><img class="lazy" src="http://iph.href.lu/600x400?text=52%E5%9B%A2%E7%A7%9F&fg=000&bg=FFF"/></a>
+							<a href="javascript:void(0);" target="_blank"><img class="lazy" src="http://iph.href.lu/600x400?text=.&fg=000&bg=FFF"/></a>
 						</div>
 					</div>
 				</div>
