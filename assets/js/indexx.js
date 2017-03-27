@@ -3,6 +3,8 @@ $(document).ready(function() {
 		animation: "slide"
 	});
 	
+	$('.lazy').Lazy();
+	
 	var $list = $('#list');
 	$.getJSON('home.php', function(res) {
 		var html = '';
