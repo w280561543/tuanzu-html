@@ -3,7 +3,6 @@
 	<head>
 		<?php require './components/head.php' ?>
 		<link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/flexslider/2.6.3/flexslider.min.css"/>
-		<link rel="stylesheet" type="text/css" href="assets/css/icon/iconfont.min.css" />
 
 		<link rel="stylesheet" type="text/css" href="assets/css/core.css" />
 	</head>
