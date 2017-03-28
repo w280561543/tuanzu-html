@@ -1,4 +1,4 @@
-<div class="w-100p bg-dark-orange" style="height:1px"></div>
+<div class="w-100p bg-dark-orange mt-10" style="height:1px"></div>
 <div class="w-100p bg-white">
 	<div class="container">
 		<ul class="nav nav-fill">
@@ -54,7 +54,7 @@
 	<div class="container" style="height:40px;line-height: 40px;">
 		<small class="font-size-12">Copyright © 2013-2016 52tuanzu.com（广州团租资产管理有限公司）. All Rights Reserved <a href="http://www.beianbeian.com/search/52tuanzu.com" target="_black">粤ICP备14091469号</a></small>
 		<ul class="nav float-right">
-			<li class="nav-item"><a class="nav-link-sm text-dark-orange" href="/">首页</a></li>
+			<li class="nav-item"><a class="nav-link-sm text-dark-orange" href="index.php">首页</a></li>
 			<!--<li class="nav-item"><a class="nav-link-sm text-dark-orange" href="join.html">加入我们</a></li>-->
 			<li class="nav-item"><a class="nav-link-sm text-dark-orange" href="faq.php">租前须知</a></li>
 			<!--<li class="nav-item"><a class="nav-link-sm text-dark-orange" href="fd.html">房主加盟</a></li>

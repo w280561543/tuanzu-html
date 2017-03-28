@@ -102,17 +102,19 @@ h6 {
 
 .filter-options>dl>dt {
 	font-weight: bolder;
-	color: #666666;
+	color: #666;
 	margin-left: 5px;
 }
 
 .filter-options>dl>dd {
 	margin-left: 15px;
 }
-
-.filter-options>dl>dd>label:hover,
-.filter-options>dl>dd.active>label {
-	cursor: pointer;
+.filter-options>dl>dd>a {
+	text-decoration: none;
+	color: #777;
+}
+.filter-options>dl>dd>a:hover,
+.filter-options>dl>dd.active>a {
 	color: #ed6c00;
 }
 
