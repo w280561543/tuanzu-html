@@ -1,5 +1,5 @@
 <?php
-class IndexController extends Phalcon\Mvc\Controller {
+class IndexController extends ControllerBase {
 	public function indexAction() {}
 
 	public function joinAction() {}

@@ -1,8 +1,3 @@
-<?php
-	if(isset($_GET['filter'])) {
-		
-	}
-?>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -26,7 +21,7 @@
 					</div>
 				</div>-->
 				<div class="cb"></div>
-				<form id="filterForm" name="form1" method="get" action="list.php">
+				<form id="filterForm" name="form1" method="get" action="/list">
 				    <input type="hidden" id="district" name="filter[district]"/>
 				    <input type="hidden" id="line" name="filter[line]"/>
 			      	<input type="hidden" id="price" name="filter[price]"/>
@@ -231,7 +226,7 @@
 		
 		<?php $this->partial("components/footer") ?>
 		<script type="text/javascript">
-			var obj = <?=isset($_GET['filter'])?json_encode($_GET['filter']):'undefined'?>;
+			var obj = <?= $obj ?>;
 		</script>
 		<script type="text/javascript" charset="utf-8" src="assets/js/list.js"></script>
 	</body>
