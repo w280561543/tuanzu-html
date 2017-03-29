@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<?php require './components/head.php' ?>
+		<?php $this->partial("components/head") ?>
 		<link rel="stylesheet" type="text/css" href="assets/css/core.css" />
 	</head>
 	<body>
-		<?php require './components/banner.php' ?>
+		<?php $this->partial("components/header") ?>
 		<div class="w-100p bg-white">
 			<div class="container text-center">
 				<h1>FAQ 租前须知</h1>
@@ -32,7 +32,7 @@
 			</div>
 		</div>
 
-		<?php require './components/footer.php' ?>
+		<?php $this->partial("components/footer") ?>
 		<script type="text/javascript" charset="utf-8" src="assets/js/faq.js"></script>
 	</body>
 

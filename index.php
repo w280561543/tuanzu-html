@@ -1,84 +1,55 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<?php require './components/head.php' ?>
-		<link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/flexslider/2.6.3/flexslider.min.css"/>
+<?php
+define('BASE_PATH', realpath(dirname(__FILE__)) . '/');
 
-		<link rel="stylesheet" type="text/css" href="assets/css/core.css" />
-	</head>
-	<body>
-		<?php require './components/banner.php' ?>
+(new Phalcon\Loader()) -> registerDirs(array(BASE_PATH . 'app/controllers/', BASE_PATH . 'models/')) -> register();
 
-		<div class="flexslider">
-			<ul class="slides">
-				<li><img src="assets/images/slider/1.jpg" /></li>
-				<li><img src="assets/images/slider/2.jpg" /></li>
-			</ul>
-		</div>
-		<div class="w-100p h-80 bg-dark-orange">
-			<div class="container pl-20" style="padding-left: 200px;">
-				<form name="searchform" method="post" action="/search/index.php">
-					<input class="form-control" style="display:block;float:left;border: 0px;width: 700px;height:40px;*height:28px;height:30px \0;" name="keyword" type="text" placeholder="区域/街道路段/小区/地铁/地段/风格特色/标题标语">
-					<button class="btn bg-dark-darkgray" style="width: 100px;height:40px;height:42px \0;" type="submit">搜索</button>
-				</form>
-			</div>
-		</div>
+$di = new Phalcon\DI\FactoryDefault();
 
-		<div class="w-100p bg-white"><h3 class="text-center pl-20" style="font-weight: 100;">今日精选房源</h3></div>
-		<div id="list" class="container"></div>
+$di -> set('view', function() {
+	$view = new Phalcon\Mvc\View();
+	$view -> setViewsDir(BASE_PATH . 'app/views');
+	return $view;
+});
 
-		<div class="w-100p bg-dark-orange" style="height:1px"></div>
-		<div class="w-100p bg-white" style="height:200px">
-			<div class="container">
-				<h3 class="text-center text-dark-orangered pt-20" style="font-weight: 100;">选择我们的理由</h3>
-				<ul class="nav nav-fill">
-					<li class="nav-item text-center"><i class="iconfont icon-home font-size-46 text-dark-orangered"></i><h4>真实房源</h4><small class="font-size-12 text-dark-darkgray">精品装修优质生活环境</small></li>
-					<li class="nav-item text-center"><i class="iconfont icon-forbid font-size-46 text-dark-orangered"></i><h4>免中介费</h4><small class="font-size-12 text-dark-darkgray">免除中介费用随时入住</small></li>
-					<li class="nav-item text-center"><i class="iconfont icon-metro font-size-46 text-dark-orangered"></i><h4>交通便利</h4><small class="font-size-12 text-dark-darkgray">地铁沿线生活配套齐全</small></li>
-					<li class="nav-item text-center"><i class="iconfont icon-wifi font-size-46 text-dark-orangered"></i><h4>免费wifi</h4><small class="font-size-12 text-dark-darkgray">畅想游玩于网络世界中</small></li>
-					<li class="nav-item text-center"><i class="iconfont icon-clean font-size-46 text-dark-orangered"></i><h4>维修保洁</h4><small class="font-size-12 text-dark-darkgray">定期保洁及时上门维修</small></li>
-				</ul>
-			</div>
-		</div>
-		<div class="w-100p bg-dark-orange" style="height:1px"></div>
+$di -> set('db', function() {
+	return new Phalcon\Db\Adapter\Pdo\Mysql(array(
+		'host'     => 'rdsyaa2eyyaa2ey.mysql.rds.aliyuncs.com',
+		'username' => 'tuanzu',
+		'password' => 'tuanzu_52',
+		'dbname'   => 'tuanzu',
+		'port'     => 3306,
+		'options'  => array(
+			PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES 'UTF8'"
+		))
+	);
+});
 
-		<div class="container mt-20">
-			<div class="line-big">
-				<div class="x6">
-					<div class="item">
-						<div class="item-img">
-							<a href="javascript:void(0);" target="_blank"><img class="lazy" src="http://iph.href.lu/600x400?fg=000&bg=FFF"/></a>
-						</div>
-					</div>
-				</div>
-				<div class="x6">
-					<div class="item">
-						<div class="item-img">
-							<a href="javascript:void(0);" target="_blank"><img class="lazy" src="http://iph.href.lu/600x400?fg=000&bg=FFF"/></a>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="line-big">
-				<div class="x6">
-					<div class="item">
-						<div class="item-img">
-							<a href="javascript:void(0);" target="_blank"><img class="lazy" src="http://iph.href.lu/600x400?fg=000&bg=FFF"/></a>
-						</div>
-					</div>
-				</div>
-				<div class="x6">
-					<div class="item">
-						<div class="item-img">
-							<a href="javascript:void(0);" target="_blank"><img class="lazy" src="http://iph.href.lu/600x400?fg=000&bg=FFF"/></a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<?php require './components/footer.php' ?>
-		<script type="text/javascript" charset="utf-8" src="//cdn.bootcss.com/flexslider/2.6.3/jquery.flexslider.min.js"></script>
-		<script type="text/javascript" charset="utf-8" src="assets/js/index.js"></script>
-	</body>
+$di -> set('router', function() {
+	$router = new Phalcon\Mvc\Router(false);
+	$router -> setUriSource(\Phalcon\Mvc\Router::URI_SOURCE_SERVER_REQUEST_URI);
+	$router -> removeExtraSlashes(true);
+	
+	$router -> notFound(array('controller' => 'index', 'action' => 'notFound'));
+	
+	$router -> addGet('/', array('controller' => 'index', 'action' => 'index')) -> setName('index');
+	$router -> addGet('/faq', array('controller' => 'index', 'action' => 'faq')) -> setName('faq');
+	$router -> addGet('/about', array('controller' => 'index', 'action' => 'about')) -> setName('about');
+	$router -> addGet('/fd', array('controller' => 'index', 'action' => 'fd')) -> setName('fd');
+	$router -> addGet('/join', array('controller' => 'index', 'action' => 'join')) -> setName('join');
+	$router -> addGet('/list', array('controller' => 'list', 'action' => 'index')) -> setName('list');
 
-</html>
+	return $router;
+});
+
+try {
+	if (PHP_OS == 'Linux') {
+		$uri = $_SERVER['REQUEST_URI'];
+	} else {
+		$uri = null;
+	}
+
+	(new Phalcon\Mvc\Application($di)) -> handle($uri) -> send();
+} catch (\Exception $e) {
+	echo 'Exception:', $e->getMessage();
+}
+?>

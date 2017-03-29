@@ -1,54 +1,19 @@
+<?php
+	if(isset($_GET['filter'])) {
+		
+	}
+?>
 <!DOCTYPE html>
 <html>
-
 	<head>
-		<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge,,chrome=1" />
-		<meta http-equiv="cache-control" content="no-cache" />
-		<meta name="renderer" content="webkit" />
-
-		<meta name="description" content="52团组" />
-		<meta name="keywords" content="52团组" />
-
-		<title>52团租</title>
-
-		<link rel="shortcut icon" href="favicon.ico" />
-		<!--<link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/normalize/5.0.0/normalize.min.css"/>-->
-		<link rel="stylesheet" type="text/css" href="node_modules/normalize.css/normalize.css" />
-		<link rel="stylesheet" type="text/css" href="assets/css/icon/iconfont.min.css" />
-
+		<?php $this->partial("components/head") ?>
 		<link rel="stylesheet" type="text/css" href="assets/css/core.css" />
 	</head>
-
 	<body>
-		<div class="container text-dark-orange h-80">
-			<div class="row display-inline mt-10">
-				<div class="float-left">
-					<img src="assets/images/logo.png" />
-					<span style="font-size:16px;position: relative;top: -20px;">都市社交白领公寓</span>
-				</div>
-				<div class="float-right mt-10">
-					<i style="font-size: 38px;" class="iconfont icon-call"></i>
-					<span style="font-size:26px;font-weight:900;position: relative;top: -5px">020-86348611</span>
-				</div>
-			</div>
-		</div>
-		<div class="w-100p bg-dark-orange">
-			<div class="container">
-				<div class="row">
-					<ul class="nav">
-						<li class="nav-item"><a class="nav-link" href="index.html">首页</a></li>
-						<li class="nav-item"><a class="nav-link" href="list.html">我要租房</a></li>
-						<li class="nav-item"><a class="nav-link" href="faq.html">租前须知</a></li>
-						<li class="nav-item"><a class="nav-link" href="fd.html">房主加盟</a></li>
-						<li class="nav-item"><a class="nav-link" href="about.html">关于我们</a></li>
-					</ul>
-				</div>
-			</div>
-		</div>
+		<?php $this->partial("components/header") ?>
 		<div class="container mt-10">
 			<div class="filter">
-				<div class="filter-search clearfix">
+				<!--<div class="filter-search clearfix">
 					<div class="x4">
 						<input type="text" name="" class="form-control" style="display:block;float:left;width: 250px;height:25px;*height:15px;height:15px \0;"/>
 						<button class="btn bg-dark-orange text-white" style="width: 80px;height:25px;height:27px \0;line-height:10px;">搜索</button>
@@ -59,66 +24,71 @@
 						<a href="javascript:void(0);">华师</a>
 						<a href="javascript:void(0);">华师</a>
 					</div>
-				</div>
+				</div>-->
 				<div class="cb"></div>
-				<div class="filter-options">
-					<dl>
-						<dt>区&nbsp;&nbsp;域：</dt>
-						<dd class="active"><label>不限</label></dd>
-						<dd><label>天河区</label></dd>
-						<dd><label>海珠区</label></dd>
-						<dd><label>越秀区</label></dd>
-						<dd><label>荔湾区</label></dd>
-						<dd><label>白云区</label></dd>
-						<dd><label>黄埔区</label></dd>
-						<dd><label>番禺区</label></dd>
-						<dd><label>南沙区</label></dd>
-						<dd><label>萝岗区</label></dd>
-						<dd><label>花都区</label></dd>
-						<dd><label>增城区</label></dd>
-						<dd><label>从化区</label></dd>
-					</dl>
-					
-					<dl>
-						<dt>地&nbsp;&nbsp;铁：</dt>
-						<dd class="active"><label>不限</label></dd>
-						<dd><label>1号线</label></dd>
-						<dd><label>2号线</label></dd>
-						<dd><label>3号线</label></dd>
-						<dd><label>4号线</label></dd>
-						<dd><label>5号线</label></dd>
-						<dd><label>6号线</label></dd>
-						<dd><label>7号线</label></dd>
-						<dd><label>8号线</label></dd>
-						<dd><label>APM</label></dd>
-						<dd><label>广佛线</label></dd>
-					</dl>
-					
-					<dl>
-						<dt>租&nbsp;&nbsp;金：</dt>
-						<dd class="active"><label>不限</label></dd>
-						<dd><label>0-1500</label></dd>
-						<dd><label>1500-2000</label></dd>
-						<dd><label>2000-2500</label></dd>
-						<dd><label>2500-3000</label></dd>
-						<dd><label>3000-5000</label></dd>
-					</dl>
-					
-					<dl>
-						<dt>室&nbsp;&nbsp;友：</dt>
-						<dd class="active"><label>不限</label></dd>
-						<dd><label>女神</label></dd>
-						<dd><label>男神</label></dd>
-					</dl>
-					
-					<dl>
-						<dt>配&nbsp;&nbsp;置：</dt>
-						<dd><label>独立卫生间</label></dd>
-						<dd><label>带阳台</label></dd>
-						<dd><label>带飘窗</label></dd>
-						<dd><label>可住俩人</label></dd>
-					</dl>
-				</div>
+				<form id="filterForm" name="form1" method="get" action="list.php">
+				    <input type="hidden" id="district" name="filter[district]"/>
+				    <input type="hidden" id="line" name="filter[line]"/>
+			      	<input type="hidden" id="price" name="filter[price]"/>
+					<div class="filter-options">
+						<dl>
+							<dt>区&nbsp;&nbsp;域：</dt>
+							<dd class="active"><a href="javascript:void(0);" data-key="district" data-value="0">不限</a></dd>
+							<dd><a href="javascript:void(0);" data-key="district" data-value="天河区">天河区</a></dd>
+							<dd><a href="javascript:void(0);" data-key="district" data-value="海珠区">海珠区</a></dd>
+							<dd><a href="javascript:void(0);" data-key="district" data-value="越秀区">越秀区</a></dd>
+							<dd><a href="javascript:void(0);" data-key="district" data-value="荔湾区">荔湾区</a></dd>
+							<dd><a href="javascript:void(0);" data-key="district" data-value="白云区">白云区</a></dd>
+							<dd><a href="javascript:void(0);" data-key="district" data-value="黄埔区">黄埔区</a></dd>
+							<dd><a href="javascript:void(0);" data-key="district" data-value="番禺区">番禺区</a></dd>
+							<dd><a href="javascript:void(0);" data-key="district" data-value="南沙区">南沙区</a></dd>
+							<dd><a href="javascript:void(0);" data-key="district" data-value="萝岗区">萝岗区</a></dd>
+							<dd><a href="javascript:void(0);" data-key="district" data-value="花都区">花都区</a></dd>
+							<dd><a href="javascript:void(0);" data-key="district" data-value="增城区">增城区</a></dd>
+							<dd><a href="javascript:void(0);" data-key="district" data-value="从化区">从化区</a></dd>
+						</dl>
+						
+						<dl>
+							<dt>地&nbsp;&nbsp;铁：</dt>
+							<dd class="active"><a href="javascript:void(0);" data-key="line" data-value="0">不限</a></dd>
+							<dd><a href="javascript:void(0);" data-key="line" data-value="1号线">1号线</a></dd>
+							<dd><a href="javascript:void(0);" data-key="line" data-value="2号线">2号线</a></dd>
+							<dd><a href="javascript:void(0);" data-key="line" data-value="3号线">3号线</a></dd>
+							<dd><a href="javascript:void(0);" data-key="line" data-value="4号线">4号线</a></dd>
+							<dd><a href="javascript:void(0);" data-key="line" data-value="5号线">5号线</a></dd>
+							<dd><a href="javascript:void(0);" data-key="line" data-value="6号线">6号线</a></dd>
+							<dd><a href="javascript:void(0);" data-key="line" data-value="7号线">7号线</a></dd>
+							<dd><a href="javascript:void(0);" data-key="line" data-value="8号线">8号线</a></dd>
+							<dd><a href="javascript:void(0);" data-key="line" data-value="APM">APM</a></dd>
+							<dd><a href="javascript:void(0);" data-key="line" data-value="广佛线">广佛线</a></dd>
+						</dl>
+						
+						<dl>
+							<dt>租&nbsp;&nbsp;金：</dt>
+							<dd class="active"><a href="javascript:void(0);" data-key="price" data-value="0">不限</a></dd>
+							<dd><a href="javascript:void(0);" data-key="price" data-value="0-1500">0-1500</a></dd>
+							<dd><a href="javascript:void(0);" data-key="price" data-value="1500-2000">1500-2000</a></dd>
+							<dd><a href="javascript:void(0);" data-key="price" data-value="2000-2500">2000-2500</a></dd>
+							<dd><a href="javascript:void(0);" data-key="price" data-value="2500-3000">2500-3000</a></dd>
+							<dd><a href="javascript:void(0);" data-key="price" data-value="3000-5000">3000-5000</a></dd>
+						</dl>
+
+						<!--<dl>
+							<dt>室&nbsp;&nbsp;友：</dt>
+							<dd class="active"><a href="javascript:void(0);">不限</a></dd>
+							<dd><a href="javascript:void(0);">女神</a></dd>
+							<dd><a href="javascript:void(0);">男神</a></dd>
+						</dl>-->
+
+						<!--<dl>
+							<dt>配&nbsp;&nbsp;置：</dt>
+							<dd><a href="javascript:void(0);">独立卫生间</a></dd>
+							<dd><a href="javascript:void(0);">带阳台</a></dd>
+							<dd><a href="javascript:void(0);">带飘窗</a></dd>
+							<dd><a href="javascript:void(0);">可住俩人</a></dd>
+						</dl>-->
+					</div>
+				</form>
 			</div>
 		</div>
 
@@ -126,12 +96,12 @@
 			<div class="filter">
 				<ul class="nav">
 					<li class="nav-item"><a class="nav-link-sm text-dark-orange" href="javascript:void(0);">默认</a></li>
-					<li class="nav-item"><a class="nav-link-sm text-dark-darkgray" href="javascript:void(0);">价格低~高</a></li>
-					<li class="nav-item"><a class="nav-link-sm text-dark-darkgray" href="javascript:void(0);">价格高~低</a></li>
+					<!--<li class="nav-item"><a class="nav-link-sm text-dark-darkgray" href="javascript:void(0);">价格低~高</a></li>
+					<li class="nav-item"><a class="nav-link-sm text-dark-darkgray" href="javascript:void(0);">价格高~低</a></li>-->
 				</ul>
 			</div>
 		</div>
-		
+
 		<div class="container">
 			<div class="line-big">
 				<div class="x3">
@@ -259,52 +229,11 @@
 			</div>
 		</div>
 		
-		<div class="w-100p bg-white mt-10">
-			<div class="container">
-				<ul class="nav nav-fill">
-					<li class="nav-item pl-40">
-						<i class="iconfont icon-number font-size-46 text-dark-darkturquoise float-left"></i>
-						<div style="position: relative;left:5px;top:8px;"><h4>在线找房</h4><small class="font-size-12 text-dark-darkgray">随时拨打客服热线预约看房</small></div>
-					</li>
-					<li class="nav-item pl-40">
-						<i class="iconfont icon-number2 font-size-46 text-dark-darkturquoise float-left"></i>
-						<div style="position: relative;left:5px;top:8px;"><h4>管家陪看</h4><small class="font-size-12 text-dark-darkgray">管家全程陪同解除疑惑</small></div>
-					</li>
-					<li class="nav-item pl-40">
-						<i class="iconfont icon-number3 font-size-46 text-dark-darkturquoise float-left"></i>
-						<div style="position: relative;left:5px;top:8px;"><h4>签订协议</h4><small class="font-size-12 text-dark-darkgray">了解入住须知抢占优质房源</small></div>
-					</li>
-					<li class="nav-item pl-40">
-						<i class="iconfont icon-number4 font-size-46 text-dark-darkturquoise float-left"></i>
-						<div style="position: relative;left:5px;top:8px;"><h4>付款方式</h4><small class="font-size-12 text-dark-darkgray">选择您喜欢的付款方式</small></div>
-					</li>
-					<li class="nav-item pl-40">
-						<i class="iconfont icon-number5 font-size-46 text-dark-darkturquoise float-left"></i>
-						<div style="position: relative;left:5px;top:8px;"><h4>拎包入住</h4><small class="font-size-12 text-dark-darkgray">随时随地拎包入住</small></div>
-					</li>
-				</ul>
-			</div>
-		</div>
-		<div class="w-100p bg-dark-orange" style="height:10px"></div>
-		<div class="w-100p bg-white">
-			<div class="container">
-				asdfasf
-			</div>
-		</div>
-		<div class="w-100p bg-dark-darkgray">
-			<div class="container" style="height:40px;line-height: 40px;">
-				<small class="font-size-12">Copyright © 2013-2016 52tuanzu.com（广州团租资产管理有限公司）. All Rights Reserved <a href="http://www.beianbeian.com/search/52tuanzu.com" target="_black">粤ICP备14091469号</a></small>
-				<ul class="nav float-right">
-					<li class="nav-item"><a class="nav-link-sm text-dark-orange" href="index.html">首页</a></li>
-					<li class="nav-item"><a class="nav-link-sm text-dark-orange" href="join.html">加入我们</a></li>
-					<li class="nav-item"><a class="nav-link-sm text-dark-orange" href="faq.html">租前须知</a></li>
-					<li class="nav-item"><a class="nav-link-sm text-dark-orange" href="fd.html">房主加盟</a></li>
-					<li class="nav-item"><a class="nav-link-sm text-dark-orange" href="about.html">关于我们</a></li>
-				</ul>
-			</div>
-		</div>
-		<!--<script type="text/javascript" charset="utf-8" src="//cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>-->
-		<script type="text/javascript" charset="utf-8" src="node_modules/jquery/dist/jquery.min.js"></script>
+		<?php $this->partial("components/footer") ?>
+		<script type="text/javascript">
+			var obj = <?=isset($_GET['filter'])?json_encode($_GET['filter']):'undefined'?>;
+		</script>
+		<script type="text/javascript" charset="utf-8" src="assets/js/list.js"></script>
 	</body>
 
 </html>
