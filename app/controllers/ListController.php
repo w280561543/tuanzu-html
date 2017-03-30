@@ -8,18 +8,30 @@ class ListController extends ControllerBase {
 			-> innerJoin('TuanzuSuite', 'ts.id = TuanzuRoom.suite_id', 'ts')
 			-> where('TuanzuRoom.member_id is NULL AND TuanzuRoom.status = 0 AND TuanzuRoom.price <> 0')
 			-> orderBy('TuanzuRoom.price ASC');
+		if($this -> request -> hasQuery('filter')) {
+			$filter = $this -> request -> getQuery('filter');
+//			var_dump($filter);exit;
+			if(isset($filter['district'])) {
+				//$builder -> addWhere('ts.district LIKE "' . $filter['district'] . '"');
+				//var_dump($builder);exit;
+			}
+			if(isset($filter['line'])) {
+				//$builder -> addWhere('ts.line LIKE "' . $filter['line'] . '"');
+			}
+			if(isset($filter['price'])) {
+				$price = explode('-',$filter['price']);
+				$builder -> betweenWhere('TuanzuRoom.price',$price[0],$price[1]);
+			}
+			$this -> view -> obj = json_encode($this -> request -> getQuery('filter'));
+		} else {
+			$this -> view -> obj = 'undefined';
+		}
 
 		$paginator = new Phalcon\Paginator\Adapter\QueryBuilder(array(
 			'builder' => $builder,
 			'limit'   => 16,
 			'page'    => $currentPage
 		));
-		if($this -> request -> hasQuery('filter')) {
-			$this -> view -> obj = json_encode($this -> request -> getQuery('filter'));
-		} else {
-			$this -> view -> obj = 'undefined';
-		}
-//		var_dump($paginator -> getPaginate());exit;
 		$this -> view -> page = $paginator -> getPaginate();
 	}
 

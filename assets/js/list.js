@@ -14,7 +14,7 @@ $(document).ready(function() {
 			}
 			filterForm.submit();
 		}
-	})
+	});
 	if(obj != undefined) {
 		for(k in obj) {
 			filterFormInput.filter('#' + k).val(obj[k]);
