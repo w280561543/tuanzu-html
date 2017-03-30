@@ -1,7 +1,7 @@
 <?php
 define('BASE_PATH', realpath(dirname(__FILE__)) . '/');
 
-(new Phalcon\Loader()) -> registerDirs(array(BASE_PATH . 'app/controllers/', BASE_PATH . 'models/')) -> register();
+(new Phalcon\Loader()) -> registerDirs(array(BASE_PATH . 'app/controllers/', BASE_PATH . 'app/models/')) -> register();
 
 $di = new Phalcon\DI\FactoryDefault();
 
@@ -36,7 +36,7 @@ $di -> set('router', function() {
 	$router -> addGet('/about', array('controller' => 'index', 'action' => 'about')) -> setName('about');
 	$router -> addGet('/fd', array('controller' => 'index', 'action' => 'fd')) -> setName('fd');
 	$router -> addGet('/join', array('controller' => 'index', 'action' => 'join')) -> setName('join');
-	$router -> addGet('/list', array('controller' => 'list', 'action' => 'index')) -> setName('list');
+	$router -> addGet('/list(\??)(.*)', array('controller' => 'list', 'action' => 'index')) -> setName('list');
 
 	return $router;
 });
