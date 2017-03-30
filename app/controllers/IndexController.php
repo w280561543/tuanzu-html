@@ -8,7 +8,9 @@ class IndexController extends ControllerBase {
 	
 	public function aboutAction() {}
 	
-	public function fdAction() {}
+	public function fdAction() {
+		var_dump(strpos('http://52tuanzu.com/list&p=3','?p='));exit;
+	}
 
 	public function notFoundAction() {
 		echo '<h1>404 Not Found!</h1>';

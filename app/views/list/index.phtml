@@ -124,8 +124,15 @@
 		<div class="container mt-10">
 			<div class="filter">
 				<ul class="nav mlr-a">
-					<?=$page -> current == 1?'':'<li class="nav-item"><a class="nav-link text-dark-darkgray" href="/list?p=' . $page -> first . '">首页</a></li>'?>
-					<?=$page -> current == 1?'':'<li class="nav-item"><a class="nav-link text-dark-darkgray" href="/list?p=' . $page -> before . '">上一页</a></li>'?>
+					<?php
+						if(strpos($_SERVER['REQUEST_URI'], '&p=')) {
+							$href = explode('&p=', $_SERVER['REQUEST_URI']);
+						} else {
+							$href = explode('?p=', $_SERVER['REQUEST_URI']);
+						}
+					?>
+					<?=$page -> current == 1?'':'<li class="nav-item"><a class="nav-link text-dark-darkgray" href="' . $href[0] . '&p=' . $page -> first . '">首页</a></li>'?>
+					<?=$page -> current == 1?'':'<li class="nav-item"><a class="nav-link text-dark-darkgray" href="' . $href[0] . '&p=' . $page -> before . '">上一页</a></li>'?>
 					<?php
 						$maxSize = 6;
 						$startPage = 1;
@@ -137,11 +144,11 @@
 						<?php if($page->current == $i) { ?>
 							<li class="nav-item"><a class="nav-link text-dark-orange" href="javascript:void(0);"><?=$i?></a></li>
 						<?php } else {?>
-							<li class="nav-item"><a class="nav-link text-dark-darkgray" href="/list?p=<?=$i?>"><?=$i?></a></li>
+							<li class="nav-item"><a class="nav-link text-dark-darkgray" href="<?=$href[0]?>&p=<?=$i?>"><?=$i?></a></li>
 						<?php } ?>
 					<?php } ?>
-					<?=$page -> current == $page -> total_pages?'':'<li class="nav-item"><a class="nav-link text-dark-darkgray" href="/list?p=' . $page -> next . '">下一页</a></li>'?>
-					<?=$page -> current == $page -> total_pages?'':'<li class="nav-item"><a class="nav-link text-dark-darkgray" href="/list?p=' . $page -> last . '">尾页</a></li>'?>
+					<?=$page -> current == $page -> total_pages?'':'<li class="nav-item"><a class="nav-link text-dark-darkgray" href="' . $href[0] . '&p=' . $page -> next . '">下一页</a></li>'?>
+					<?=$page -> current == $page -> total_pages?'':'<li class="nav-item"><a class="nav-link text-dark-darkgray" href="' . $href[0] . '&p=' . $page -> last . '">尾页</a></li>'?>
 				</ul>
 			</div>
 		</div>

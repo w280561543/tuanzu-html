@@ -9,7 +9,8 @@ $(document).ready(function() {
 			filterFormInput.filter('#' + _this.data('key')).val(_this.data('value'));
 			for(var j = 0, len = filterFormInput.length; j < len; j++) {
 				if(filterFormInput[j].value == '' || filterFormInput[j].value == '0') {
-					filterFormInput[j].remove();
+					//filterFormInput[j].remove();
+					filterFormInput[j].parentNode.removeChild(filterFormInput[j]);
 				}
 			}
 			filterForm.submit();
